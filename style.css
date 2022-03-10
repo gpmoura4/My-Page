@@ -1,20 +1,52 @@
-@font-face {
-    font-family: 'Pixelvolve' ;
-    src: url(fonts/Pixel\ Digivolve.otf) format('opentype');
+html {
+    /* 1 rem = 10px, é multiplicado pelo todo */
+    /* em = texto é multiplicado pelo pai */
+    font-size: 98%;
 }
 
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(209, 209, 255);
+    height: 100vh;
+    font-size: 1.6rem;
 }
 
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pixelvolve';
+    src: url(fonts/Pixel\ Digivolve.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Gabato';
+    src: url(fonts/Gabato.ttf) format('truetype'); 
+}
+
+@font-face {
+    font-family: 'ComputerLove';
+    src: url(fonts/5Computers-In-Love.ttf) format('truetype'); 
+}
+
+
+
 header {
+    background-color:#4b40ac;
+    border-bottom: #000 solid 10px;
+}
+
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#4b40ac;
+    width: 90%;
+    max-width: 1700px;
     padding: 30px;
-    border-bottom: #000 solid 10px;
+    margin: auto;
 }
 
 .caixa-titulo {
@@ -28,11 +60,16 @@ header {
 }
 
 .caixa-titulo h1 {
-    font-family: 'Pixelvolve';
-    font-size: 3em;
+    font-family: 'Gabato';
+    font-size: 3rem;
     color: rgb(255, 255, 255);
-    margin-bottom: 20px;
     text-shadow: 6px 6px 0px #000;
+}
+
+.menu {
+    width: 100%;
+    max-width: 1700px;
+    margin-left: 30px;
 }
 
 .menu-item {
@@ -47,7 +84,7 @@ header {
 .link-menu {
     display: inline-flex;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: white;
     margin-right: 15px;
     padding-left: 15px;
@@ -76,7 +113,7 @@ header {
     padding: 0px 15px 0px 15px;
     line-height: 60px;
     background: rgb(252, 74, 74);
-    font-size: 1.3em;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
     font-weight: bold;
     box-shadow: 7px 7px 0 #000;
@@ -90,3 +127,424 @@ header {
     color:rgb(0, 0, 0);
     transform: scale(1.07);
 }
+
+main {
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+    font-size: 2rem;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.column-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 40px 0px 50px;
+}
+
+.name-course {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 700px;
+    height: auto;
+    box-shadow: 10px 10px 0px #000;
+    background-color:#100e21;
+    border-radius: 20px; 
+    margin-bottom: 50px;
+    padding: 15px 0px;
+}
+
+.name-course h2 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #f9ca24;
+    text-shadow: 5px 5px 5px #000;
+    font-family: 'Gabato';
+}
+
+.name-course p {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: #FFF;
+    text-shadow: 7px 7px 4px #000;
+    font-family: 'Gabato';
+}
+
+.text-about, .text {
+    width: 600px;
+    background-color:#100e21;
+    padding: 20px;
+    border: solid 5px #000000;
+    border-radius: 20px;
+}
+
+
+.text {
+    width: 460px;
+}
+
+.text, .text-about p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align:center;
+    color: white;
+}
+
+.text strong, .text-about strong {
+    color:#f9ca24;
+}
+
+.gpmoura-img {
+    width: 650px;
+    margin-left: 50px;
+}
+
+.title-box {
+    padding: 10px;
+    display: flex;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 7px 7px 0px #000;
+    margin: 0 auto;
+    justify-content:center;
+    background:#4b40ac;
+}
+
+.history-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFF;
+}
+
+#history {
+    padding: 10px;
+    margin: 60px 0px 40px 0px;
+}
+
+.row-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+footer {
+    padding: 30px;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+}
+
+#contact-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-list {
+    display: flex;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item img {
+    width: 115px;
+    margin-bottom: 15px;
+}
+
+.contact-img {
+    margin-bottom: 120px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    font-size: 1.5rem; 
+    padding: 15px;
+    background: rgb(252, 74, 74);
+    box-shadow: 7px 7px 0px #000;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 250ms;
+}
+
+.contact-item a:hover {
+    background: rgb(95, 206, 159);
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    transform: scale(1.07);
+}
+
+.contact-item .link-contact {
+    margin-top: 6px;
+}
+
+/*De 0 até X ele vai aplicar as configurações que eu colocar aqui*/
+
+@media (max-width:1440px){
+    .gpmoura-img {
+        width: 500px;
+        margin-left: 0px;
+    }
+    .text {
+        width: 350px;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .gpmoura-img {
+        width: 300px;
+        margin-left: 0px;
+    }
+
+    .curriculum-menu {
+        margin-top: 10px;
+    }
+
+    .menu {        
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .text {
+        font-size: 1.2rem;
+        width: 230px;
+    }
+
+    .name-course {
+        width: 550px;
+    }
+    .name-course h2 {
+        font-size: 3rem;
+    }
+
+    .text-about {
+        width: 480px;
+    }
+
+    .text-about p {
+        font-size: 2rem;
+    }
+
+    .contact-item a {
+        text-align: center;
+    }
+}
+
+@media(max-width:768px){
+
+
+
+    main {
+        font-size: 80%;
+    }
+
+    #about {
+        justify-content: flex-start;
+    }
+
+    .column-box {
+        margin: 0px 20px 0px 0px;
+        align-items: flex-start;
+    }
+
+    .name-course {
+        width: 400px;
+    }
+
+    .name-course h2, .name-course p {
+        font-size: 1.3em;
+    }
+
+    .text-about {
+        width: 350px;
+    }
+
+    .text-about p {
+        font-size: 1em;
+    }
+
+    .gpmoura-img{
+        width: 280px;
+    }
+
+    .text {
+        width: 150px;
+    }
+}
+
+@media(max-width:425px){
+
+    header {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .cabecalho {
+        padding: 15px;
+    }
+
+    .caixa-titulo .hello-img {
+        width: 100px;
+    }
+
+    .caixa-titulo h1 {
+        font-size: 1.5em;
+    }   
+
+    .menu {
+        width: 100%;
+        max-width: 1700px;
+        margin-left: 0px;
+    }
+ 
+    .link-menu {
+        font-size: 1em;
+    }
+
+    #curriculum-button {
+        font-size: 17px;
+    }
+
+    main {
+        padding: 0px; 
+        width: 100%; 
+    }
+
+    #about {
+        align-items: flex-start;
+    }
+
+    .column-box {
+        align-items: flex-start;
+        margin: 0px 15px 0px 0px;
+    }
+    .name-course {
+        width: 200px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .name-course h2, .name-course p {
+        font-size: 1em;
+    }
+
+    .gpmoura-img {
+        width: 190px;
+    }
+
+    .title-box h3, .title-box h4 {
+        font-size: 2rem;
+    }
+
+    .text-about {
+        width: 150px;
+    }
+
+    .row-box {
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    }
+
+    .text {
+        margin-bottom: 10px;
+    }
+
+    .contact-item {
+        margin-left: 0px;
+    }
+
+    .contact-list img {
+        width: 65px;
+    }
+
+    .contact-list a {
+        font-size:1rem;
+    }
+}
+
+@media(max-width:375px) {
+    
+    .caixa-titulo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cabecalho {
+        padding: 5px;
+    }
+
+    .title-box h3, .title-box h4 {
+        font-size: 1.7rem;
+    }
+    
+    .gpmoura-img {
+        width: 142px;
+    }
+
+    .contact-item a {
+        padding: 10px;
+    }
+
+}
+
+@media(max-width:320px) {
+
+    #about {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .name-course {
+        width: 293px;
+    }
+
+    .text-about {
+        width: 251px;
+    }
+
+    .gpmoura-img {
+        width: 300px;
+    }
+
+    .title-box h3, .title-box h4 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .contact-item a {
+        padding: 5px;
+    }
+
+    
+
+}
+
+
