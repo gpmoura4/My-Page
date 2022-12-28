@@ -633,6 +633,9 @@ footer {
         transition: 400ms ease-in-out;
         box-shadow: 7px 7px 0px #000;
     }
+    .name-div h2 {
+        font-size: 4.5rem;
+      }
 
 }
 
@@ -647,7 +650,7 @@ footer {
         display: none;
     }
     .name-div h2 {
-        font-size: 4rem;
+        font-size: 3.6rem;
         text-align: center;
     }
     .about-icon {
