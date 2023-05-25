@@ -1,21 +1,27 @@
 html {
     /* 1 rem = 10px, é multiplicado pelo todo */
     /* em = texto é multiplicado pelo pai */
-    font-size: 98%;
+    font-size: 62.5%;
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: rgb(209, 209, 255);
-    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu';
+    background-color: rgb(34, 32, 32);
+    min-height: 100vh;
+    min-width: 100vw;
     font-size: 1.6rem;
+    padding-top: 17rem;
 }
 
 * {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
 @font-face {
     font-family: 'Pixelvolve';
@@ -24,527 +30,664 @@ body {
 
 @font-face {
     font-family: 'Gabato';
-    src: url(fonts/Gabato.ttf) format('truetype'); 
+    src: url(fonts/Gabato.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'ComputerLove';
-    src: url(fonts/5Computers-In-Love.ttf) format('truetype'); 
+    src: url(fonts/5Computers-In-Love.ttf) format('truetype');
 }
 
 
 
 header {
-    background-color:#4b40ac;
-    border-bottom: #000 solid 10px;
-}
-
-.cabecalho {
+    background-color: rgb(34, 32, 32);
+    border-bottom: #F6A21E solid 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    max-width: 1700px;
-    padding: 30px;
-    margin: auto;
+    width: 100vw;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.caixa-titulo {
-    display: flex; 
+
+.title-box {
+    display: flex;
     align-items: center;
+    width: 40vw;
 }
 
-.caixa-titulo .hello-img{
-    width: 130px;
+.title-box .hello-img {
+    width: 100px;
     margin-right: 20px;
 }
 
-.caixa-titulo h1 {
-    font-family: 'Gabato';
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-    text-shadow: 6px 6px 0px #000;
+
+.title-box h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    /* text-transform: uppercase; */
+    color: #eee;
+    text-shadow: 5px 5px 20px #000;
 }
 
+
 .menu {
-    width: 100%;
-    max-width: 1700px;
-    margin-left: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50vw;
+    max-width: 100%;
 }
 
 .menu-item {
-    display: inline-block;
+    list-style: none;
     transition: 300ms;
+    letter-spacing: 0.1rem;
+    margin-right: 1.5rem;
 }
 
-.menu-item:hover {
-    border-bottom: solid 3px rgb(250, 255, 221);
-}
 
 .link-menu {
-    display: inline-flex;
+    display: flex;
+    padding: 1.5rem;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: white;
-    margin-right: 15px;
-    padding-left: 15px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 1rem;
+    transition: 400ms ease-in-out;
 }
 
+.link-menu:hover {
+    background-color: #eee;
+    color: #F6A21E;
 
-.link-menu::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: rgb(240, 228, 55);
-    margin-right: 10px;
 }
-
 
 .curriculum-menu {
-    display:inline-block;
+    display: flex;
+    justify-content: center;
 }
 
 #curriculum-button {
+    display: flex;
     font-family: 'Pixelvolve';
-    display: inline-block;
-    height: 60px;
-    padding: 0px 15px 0px 15px;
-    line-height: 60px;
-    background: rgb(252, 74, 74);
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    box-shadow: 7px 7px 0 #000;
-    border-radius: 12px;
-    transition: 250ms linear;
+    background-color: #F6A21E;
     text-decoration: none;
+    color: #eee;
+    padding: 1.5rem;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: 400ms ease-in-out;
+    text-shadow: -5px 5px 5px black;
 }
 
 #curriculum-button:hover {
-    background: rgb(95, 206, 159);
-    color:rgb(0, 0, 0);
+    background: linear-gradient(45deg, #199837, #68cc49);
+    /* color:rgb(0, 0, 0); */
     transform: scale(1.07);
 }
 
+
+
+
 main {
-    padding: 30px;
-    width: 90%;
-    margin: auto;
-    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    width: 95vw;
+    margin: 0 auto;
 }
 
-#about {
+#about-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-bottom: 100px;
-}
-
-.column-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px 40px 0px 50px;
-}
-
-.name-course {
-    display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: center;
-    width: 700px;
-    height: auto;
-    box-shadow: 10px 10px 0px #000;
-    background-color:#100e21;
-    border-radius: 20px; 
-    margin-bottom: 50px;
-    padding: 15px 0px;
-}
-
-.name-course h2 {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    color: #f9ca24;
-    text-shadow: 5px 5px 5px #000;
-    font-family: 'Gabato';
-}
-
-.name-course p {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    color: #FFF;
-    text-shadow: 7px 7px 4px #000;
-    font-family: 'Gabato';
-}
-
-.text-about, .text {
-    width: 600px;
-    background-color:#100e21;
-    padding: 20px;
-    border: solid 5px #000000;
-    border-radius: 20px;
-}
-
-
-.text {
-    width: 460px;
-}
-
-.text, .text-about p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align:center;
-    color: white;
-}
-
-.text strong, .text-about strong {
-    color:#f9ca24;
 }
 
 .gpmoura-img {
-    width: 650px;
-    margin-left: 50px;
+    width: 700px;
+    border-radius: 50%;
 }
 
-.title-box {
-    padding: 10px;
+
+.info-div {
     display: flex;
-    width: 50%;
-    border-radius: 20px;
-    box-shadow: 7px 7px 0px #000;
-    margin: 0 auto;
-    justify-content:center;
-    background:#4b40ac;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw;
+
 }
 
+.name-div h2 {
+    font-size: 7rem;
+    margin-bottom: 1.5rem;
+    color: #eee;
+    text-shadow: -5px 5px 15px #000;
+    font-family: 'Ubuntu';
+    font-weight: 800;
+    text-align: center;
+}
+
+.name-div h2 strong {
+    color: #E55B13;
+}
+
+.name-div p {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    color: #F6A21E;
+    letter-spacing: 0.2rem;
+    font-family: 'Pixelvolve';
+    text-align: center;
+}
+
+.description-div {
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 4rem 0rem;
+}
+
+
+.description-div p {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #eee;
+}
+
+.text strong,
+.description-div strong {
+    color: #F6A21E;
+}
+
+.about-icon {
+    text-align: center;
+    height: 8rem;
+}
+
+/* PROPJETOS COMEÇAM AQUI */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem 2rem;
+    border-bottom: #F6A21E solid 0.5rem;
+}
+
+
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 13rem;
+}
+
+.card-name {
+    width: 48rem;
+    height: 25rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+    box-shadow: 7px 7px 0px #000;
+
+}
+
+
+#card-name1:nth-child(1) {
+    background-image: url(./imagens/calculadora.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+#card-name2:nth-child(1) {
+    background-image: url(./imagens/loginpage.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+
+#card-name3:nth-child(1) {
+    background-image: url(./imagens/cargame.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+
+#card-name4:nth-child(1) {
+    background-image: url(./imagens/8puzzl2.png);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+
+.card-name a {
+    font-size: 5rem;
+    text-shadow: 5px 5px 0px #000;
+    margin-bottom: 0.8rem;
+    color: #eee;
+    font-family: 'Pixelvolve';
+    transition: 400ms ease-in-out;
+    text-decoration: none;
+    opacity: 0;
+}
+
+
+/* .card:hover >.card-name {
+    opacity: 1;
+    
+} */
+
+.card-name p {
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    transition: 400ms ease-in-out;
+    color: #FFF;
+}
+
+
+.card:hover>.card-name::before {
+    height: 210px;
+    width: 205px;
+    opacity: 1;
+}
+
+.card:hover>.card-name a {
+    opacity: 1;
+    transform: translateY(18rem);
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    color: #eee;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+#card-name4 a {
+    font-size: 4rem;
+}
+
+
+
+.section-title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #eee;
+    font-size: 5rem;
+    font-weight: bold;
+    /* letter-spacing: 0.2rem; */
+    font-family: 'Ubuntu';
+    width: 20vw;
+    margin: 0 auto;
+    background-color: #f1a120;
+    text-decoration: none;
+    color: #eee;
+    padding: 1.5rem;
+    margin-bottom: 5rem;
+    border-radius: 0.5rem;
+    text-shadow: -5px 5px 40px black;
+}
+
+/* 
 .history-title {
     font-size: 3rem;
     font-weight: bold;
     color: #FFF;
-}
+} */
 
-#history {
-    padding: 10px;
-    margin: 60px 0px 40px 0px;
-}
-
-.row-box {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-footer {
-    padding: 30px;
-}
-
-.contact-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #FFF;
-    text-align: center;
-}
-
+#history-section,
 #contact-section {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 5rem 2rem;
+    border-bottom: #F6A21E solid 0.5rem;
+}
+
+.text {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #eee;
 }
 
 .contact-list {
     display: flex;
+    justify-content: center;
+    width: 50vw;
+    margin: 0 auto;
 }
 
 .contact-item {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    padding: 20px;
+    margin-left: 2rem;
+    padding: 2rem;
     align-items: center;
     justify-content: center;
 }
 
 .contact-item img {
     width: 115px;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .contact-img {
-    margin-bottom: 120px;
+    margin-bottom: 12rem;
 }
 
 .contact-item a {
     text-decoration: none;
-    font-size: 1.5rem; 
-    padding: 15px;
-    background: rgb(252, 74, 74);
+    font-size: 3rem;
+    padding: 2rem;
+    background-color: #eee;
     box-shadow: 7px 7px 0px #000;
-    color: #FFF;
-    font-weight: bold;
-    border-radius: 20px;
-    transition: 250ms;
+    color: #E55B13;
+    font-weight: bolder;
+    border-radius: 2rem;
+    transition: 200ms ease-in-out;
+    ;
 }
 
 .contact-item a:hover {
-    background: rgb(95, 206, 159);
-    color:rgb(0, 0, 0);
+    background: linear-gradient(45deg, #199837, #68cc49);
+    color: #eee;
     font-weight: bold;
     transform: scale(1.07);
 }
 
-.contact-item .link-contact {
-    margin-top: 6px;
+footer {
+    background-color: #f1a120;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
 }
 
-/*De 0 até X ele vai aplicar as configurações que eu colocar aqui*/
+.footer-div p {
+    color: #eee;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+}
 
-@media (max-width:1440px){
+/* RESPONSIVE */
+@media screen and (max-width: 1500px) {
+
+    /* MAXWIDTH = TELAS MENORES QUE ESSA RESOLUÇÃO */
+    .name-div h2 {
+        font-size: 6rem;
+    }
+
     .gpmoura-img {
-        width: 500px;
-        margin-left: 0px;
-    }
-    .text {
-        width: 350px;
-    }
-    
-}
-
-@media (max-width: 1024px) {
-    .gpmoura-img {
-        width: 300px;
-        margin-left: 0px;
-    }
-
-    .curriculum-menu {
-        margin-top: 10px;
-    }
-
-    .menu {        
-        display: flex;
-        flex-direction: column;
-    }
-
-    
-    .text {
-        font-size: 1.2rem;
-        width: 230px;
-    }
-
-    .name-course {
-        width: 550px;
-    }
-    .name-course h2 {
-        font-size: 3rem;
-    }
-
-    .text-about {
-        width: 480px;
-    }
-
-    .text-about p {
-        font-size: 2rem;
-    }
-
-    .contact-item a {
-        text-align: center;
-    }
-}
-
-@media(max-width:768px){
-
-
-
-    main {
-        font-size: 80%;
-    }
-
-    #about {
-        justify-content: flex-start;
-    }
-
-    .column-box {
-        margin: 0px 20px 0px 0px;
-        align-items: flex-start;
-    }
-
-    .name-course {
         width: 400px;
     }
 
-    .name-course h2, .name-course p {
-        font-size: 1.3em;
+    #about-section {
+        margin-bottom: 5rem;
     }
 
-    .text-about {
-        width: 350px;
+    header {
+        justify-content: center;
+
     }
 
-    .text-about p {
-        font-size: 1em;
+    .title-box {
+        display: none;
     }
 
-    .gpmoura-img{
-        width: 280px;
-    }
-
-    .text {
-        width: 150px;
+    .menu {
+        justify-content: center;
     }
 }
 
-@media(max-width:425px){
+@media screen and (max-width: 1250px) {
 
-    header {
-        font-size: 20px;
-        width: 100%;
+    /* MAXWIDTH = TELAS MENORES QUE ESSA RESOLUÇÃO */
+    .name-div h2 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    /* MAXWIDTH = TELAS MENORES QUE ESSA RESOLUÇÃO */
+    .gpmoura-img {
+        display: none;
     }
 
-    .cabecalho {
-        padding: 15px;
+    body {
+        font-family: 'DM Sans', sans-serif;
+        font-family: 'Ubuntu';
+        background-color: rgb(34, 32, 32);
+        min-height: 100vh;
+        min-width: 100vw;
+        font-size: 1.6rem;
+        padding-top: 15rem;
     }
 
-    .caixa-titulo .hello-img {
-        width: 100px;
+    #about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+        margin: 0 auto 5rem auto;
     }
 
-    .caixa-titulo h1 {
-        font-size: 1.5em;
-    }   
-
-    .menu {
-        width: 100%;
-        max-width: 1700px;
-        margin-left: 0px;
+    .info-div {
+        width: 95vw;
     }
- 
+
+    .name-div h2 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .about-icon {
+        text-align: center;
+        height: 6.5rem;
+    }
+
+    .section-title {
+        width: 40vw;
+    }
+
+    .card-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* MAXWIDTH = TELAS MENORES QUE ESSA RESOLUÇÃO */
     .link-menu {
-        font-size: 1em;
+        display: flex;
+        padding: 1.5rem;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 1rem;
+        transition: 400ms ease-in-out;
+    }
+
+    .menu-item {
+        margin-right: 0.5rem;
     }
 
     #curriculum-button {
-        font-size: 17px;
-    }
-
-    main {
-        padding: 0px; 
-        width: 100%; 
-    }
-
-    #about {
-        align-items: flex-start;
-    }
-
-    .column-box {
-        align-items: flex-start;
-        margin: 0px 15px 0px 0px;
-    }
-    .name-course {
-        width: 200px;
-        font-size: 28px;
-        text-align: center;
-    }
-
-    .name-course h2, .name-course p {
-        font-size: 1em;
-    }
-
-    .gpmoura-img {
-        width: 190px;
-    }
-
-    .title-box h3, .title-box h4 {
+        display: flex;
+        font-family: 'Ubuntu';
+        background-color: #F6A21E;
+        text-decoration: none;
+        color: #eee;
+        padding: 1rem;
+        align-items: center;
         font-size: 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        transition: 400ms ease-in-out;
+        text-shadow: unset;
     }
 
-    .text-about {
-        width: 150px;
-    }
-
-    .row-box {
-    display: flex;
-    /* justify-content: space-around; */
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 10px;
-    }
-
-    .text {
-        margin-bottom: 10px;
+    .contact-list {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin: 0 auto;
+        margin-bottom: 4rem;
     }
 
     .contact-item {
-        margin-left: 0px;
-    }
-
-    .contact-list img {
-        width: 65px;
-    }
-
-    .contact-list a {
-        font-size:1rem;
-    }
-}
-
-@media(max-width:375px) {
-    
-    .caixa-titulo {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        margin-left: 2rem;
+        padding: 0rem;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .cabecalho {
-        padding: 5px;
-    }
-
-    .title-box h3, .title-box h4 {
-        font-size: 1.7rem;
-    }
-    
-    .gpmoura-img {
-        width: 142px;
+    .contact-item img {
+        width: 80px;
+        margin-bottom: 1.5rem;
     }
 
     .contact-item a {
-        padding: 10px;
+        text-decoration: none;
+        font-size: 2.5rem;
+        padding: 1rem;
+        background-color: #eee;
+        box-shadow: 7px 7px 0px #000;
+        color: #E55B13;
+        font-weight: bolder;
+        border-radius: 2rem;
+        transition: 200ms ease-in-out;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* MAXWIDTH = TELAS MENORES QUE ESSA RESOLUÇÃO */
+
+    .menu-item:nth-of-type(1) {
+        display: none;
+    }
+
+
+    .contact-list {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        padding: 0rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .contact-item img {
+        width: 80px;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-item a {
+        text-decoration: none;
+        font-size: 2.5rem;
+        padding: 1rem;
+        background-color: #eee;
+        box-shadow: 7px 7px 0px #000;
+        color: #E55B13;
+        font-weight: bolder;
+        border-radius: 2rem;
+        transition: 200ms ease-in-out;
+    }
+
+    .link-menu {
+        display: flex;
+        padding: 1.5rem;
+        align-items: center;
+        font-size: 1.6rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 1rem;
+        transition: 400ms ease-in-out;
+    }
+
+    .card-name {
+        width: 35rem;
+        height: 25rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: 400ms ease-in-out;
+        box-shadow: 7px 7px 0px #000;
+    }
+
+    .name-div h2 {
+        font-size: 4.5rem;
     }
 
 }
 
-@media(max-width:320px) {
+@media screen and (max-width: 500px) {
+    /* MAXWIDTH = TELAS MENORES QUE ESSA RESOLUÇÃO */
 
-    #about {
-        align-items: flex-start;
-        flex-direction: column-reverse;
+    .section-title {
+        width: 55vw;
     }
 
-    .name-course {
-        width: 293px;
+    .menu-item:nth-of-type(3) {
+        display: none;
     }
 
-    .text-about {
-        width: 251px;
-    }
-
-    .gpmoura-img {
-        width: 300px;
-    }
-
-    .title-box h3, .title-box h4 {
-        font-size: 2rem;
+    .name-div h2 {
+        font-size: 3.6rem;
         text-align: center;
     }
 
-    .contact-item a {
-        padding: 5px;
+    .about-icon {
+        text-align: center;
+        height: 5.5rem;
     }
 
-    
 
 }
-
-
