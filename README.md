@@ -11,5 +11,5 @@
 
 Me chamo Guilherme, e sou estudante de ***Ciência da Computação***, na UFRRJ, estou no desenvolvimento deste site em prol de divulgar meu trabalho, minhas habilidades, conhecimentos e alcançar assim uma oportunidade no mercado de trabalho.
 
-### Aproveite!!! :sunglasses::sunglasses::sunglasses::sunglasses:
+### Aproveite!
 
