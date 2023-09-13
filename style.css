@@ -266,7 +266,7 @@ main {
 
 
 #card-name3:nth-child(1) {
-    background-image: url(./imagens/cargame.png);
+    background-image: url(./imagens/todolist.png);
     background-position: cover;
     background-repeat: no-repeat;
 }
